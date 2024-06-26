@@ -4,7 +4,7 @@
 
 ## To-do list
 
-- [] Setup Project 
+- [x] Setup Project 
 - [] Install Fonts 
 - [] Add Navbar / Header
 - [] Sign in Button w/ connection to streaming platfrom  (spotify atm)
