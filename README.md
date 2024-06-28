@@ -7,5 +7,5 @@
 - [x] Setup Project 
 - [x] Install Fonts 
 - [x] Add Header
-- [] Sign in Button w/ connection to streaming platfrom  (spotify atm)
+- [x] Connect to Spotify account
 - [] Display current song playing by user
