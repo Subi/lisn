@@ -8,12 +8,10 @@ import { AccessTokenResponse, PlayerResponse } from "@/types";
 export default async function Home() {
   const response:AccessTokenResponse = await getAccessToken()
   const playingTrack:PlayerResponse = await getCurrentPlayingTrack(response.access_token)
-
-  console.log(playingTrack.item.album.images[0].url)
   return (
-    <main className="w-full flex-col h-screen">
+    <main className="w-full flex-col relative justify-between">
       <Header/>
-      {!playingTrack.item ? "empty": <Player track={playingTrack.item}/>}
+        {!playingTrack.item ? "empty": <Player track={playingTrack.item} progress={playingTrack.progress_ms}/>}
     </main>
   );
 }

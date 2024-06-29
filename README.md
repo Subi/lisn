@@ -9,6 +9,7 @@
 - [x] Add Header
 - [x] Connect to Spotify account
 - []  Build music player 
+     - add timelapses
 - []  Update music player on change and sync accordingly 
 - []  User Signup
 - []  ! IF TIME ADDING FREINDS 

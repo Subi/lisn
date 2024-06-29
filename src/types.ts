@@ -27,6 +27,7 @@ export type Item = {
     track_numnber: number
     type: string
     uri:string
+    artists: Artist[]
 }
 
 type Album = {
@@ -36,11 +37,10 @@ type Album = {
     name: string
     release_date:string
     release_date_precision: string
-    total_tgracks: number
+    total_tracks: number
     type: string
     uri: string
     images: Images[]
-    artist: Artist[]
 }
 
 type Images = {
