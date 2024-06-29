@@ -8,4 +8,9 @@
 - [x] Install Fonts 
 - [x] Add Header
 - [x] Connect to Spotify account
+- []  Build music player 
+- []  Update music player on change and sync accordingly 
+- []  User Signup
+- []  ! IF TIME ADDING FREINDS 
+- []  ! IF TIME PLAY COUNT 
 - [] Display current song playing by user

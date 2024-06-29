@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export default function Header() {
     return (
-        <div className=" w-10/12 justify-between flex mx-auto pt-10">
+        <div className=" w-10/12 justify-between flex mx-auto py-10">
             <div>
                 <Link href="/" className="text-3xl  font-semibold">
                     Lisn.

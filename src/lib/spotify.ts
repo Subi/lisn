@@ -14,6 +14,7 @@ export const getAccessToken = async ():Promise<AccessTokenResponse> => {
     
     const response =  await fetch(TOKEN_ENDPOINT , {
         method: "POST",
+        cache: 'no-store',
         headers: {
             'Authorization' : `Basic ${basic}`,
             'Content-Type': "application/x-www-form-urlencoded"
@@ -35,6 +36,5 @@ export const getCurrentPlayingTrack =  async (access_token:string) => {
             'Authorization': `Bearer ${access_token}`
         }
     }) 
-
     return response.json()
 }
