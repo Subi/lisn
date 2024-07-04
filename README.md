@@ -7,13 +7,16 @@
 - [x] Setup Project 
 - [x] Install Fonts 
 - [x] Add Header
-- [x] Connect to Spotify account
-- [x]  Build music player 
-     [x]  - add timelapses
-     [x]  - add progress bar 
-     [x]  - move player to bottom of screen
-     []   - fix inital time to update accordingly
+- [x] Connect to Spotify accountneg
+- [x] Build music player 
+- [x] Add timelapses
+- [x] Add progress bar 
+- [x] Move player to bottom of screen
+- []  Fix inital time to update accordingly
 - []  User Signup
+- []  Create user database
+- []  Connect supabase
+- []  Add ability to connect to spotify
 - []  ! IF TIME ADDING FREINDS 
 - []  ! IF TIME PLAY COUNT 
 

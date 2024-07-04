@@ -11,7 +11,8 @@ interface PlayerProps {
 }
 
 export default function Player({track , progress}:PlayerProps ){
-    const [count , setCount] = useState(Math.floor(progress / track.duration_ms * 100))
+    const [count , setCount] = useState<number>(Math.floor(progress / track.duration_ms * 100))
+
     useEffect(() => {
         const id = setInterval(() => setCount((oldCount) => oldCount + 1), 2000);
         return () => {
@@ -45,9 +46,6 @@ export default function Player({track , progress}:PlayerProps ){
             {convertTime(track.duration_ms)}
             </div>
             </div>
-            {/* <div className="w-1/2 flex text-sm justify-end pr-6 items-center font-normal">
-                    {convertTime(progress)} / 
-            </div> */}
         </div>
     ) 
 }
