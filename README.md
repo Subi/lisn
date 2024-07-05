@@ -25,6 +25,6 @@
 ## Styling
 
 - [x] Update landing page
-  [x] - Add heading text
-  [ ] - Create horizontal slider w/albums (grayed out but on hover light up)
-  [x] - Improve player shadow ? 
+- [x] - Add heading text
+- [ ] - Create horizontal slider w/albums (grayed out but on hover light up)
+- [x] - Improve player shadow ? 
