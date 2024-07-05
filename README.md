@@ -16,15 +16,15 @@
 - []  User Signup
 - []  Create user database
 - []  Connect supabase
-- []  Add ability to connect to spotify
+- [x]  Add ability to connect to spotify
 - []  ! IF TIME ADDING FREINDS 
-- []  ! IF TIME PLAY COUNT 
+- []  ! IF TIME PLAY COUNT
 
 
 
 ## Styling
 
-- [] Update landing page
-     [ ] - Add heading text
-     [ ] - Create horizontal slider w/albums (grayed out but on hover light up)
-     [ ] - Improve player shadow ? 
+- [x] Update landing page
+  [x] - Add heading text
+  [ ] - Create horizontal slider w/albums (grayed out but on hover light up)
+  [x] - Improve player shadow ? 
