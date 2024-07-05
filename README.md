@@ -7,7 +7,7 @@
 - [x] Setup Project 
 - [x] Install Fonts 
 - [x] Add Header
-- [x] Connect to Spotify accountneg
+- [x] Connect to Spotify account
 - [x] Build music player 
 - [x] Add timelapses
 - [x] Add progress bar 
