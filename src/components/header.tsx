@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { AUTHORIZE_ENDPOINT } from "@/server/spotify/constant";
 
 export default function Header() {
     return (
@@ -14,7 +15,7 @@ export default function Header() {
                     <Link href="/sign-in">Sign in</Link>
                 </div>
             <Button  className="text-sm font-semibold bg-black">
-                <Link href="/sign-up">Sign up</Link>
+                <Link href="https://form.typeform.com/to/UzO3AdNc">Sign up</Link>
             </Button>
             </div>
         </div>

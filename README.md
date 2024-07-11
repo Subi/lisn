@@ -13,7 +13,7 @@
 - [x] Add progress bar 
 - [x] Move player to bottom of screen
 - [x] Fix inital time to update accordingly
-- []  Get off localhost 
+- [x]  Get off localhost 
 - []  User Signup
 - []  Create user database
 - []  Connect supabase
