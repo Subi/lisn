@@ -7,11 +7,13 @@ import { StreamingTrackResponse, TokenResponse } from "@/server/spotify/interfac
 import UserStreamingActivity from "@/components/activity";
 import { Button } from "@/components/ui/button";
 import Scroller from "@/components/scroller";
+import { Skeleton } from "@/components/ui/skeleton";
 
 
 export default async function Home() {
   const response:TokenResponse = await getAccessToken()
   const playingTrack:StreamingTrackResponse = await getCurrentPlayingTrack(response.access_token)
+  console.log(playingTrack)
   return (
     <main className="w-full flex-col items-center  justify-center">
       <Header/>
@@ -32,9 +34,27 @@ export default async function Home() {
             </span>
               </p>
         </div>
-        {!playingTrack != undefined ? 
-        <UserStreamingActivity accessToken={response.access_token} track={playingTrack.item} /> 
-        : "d"} 
+        {playingTrack != undefined ? 
+          <UserStreamingActivity accessToken={response.access_token} track={playingTrack.item} /> 
+        :
+        <>
+        <div className="flex items-center space-x-4 my-5">
+          <Skeleton className="h-12 w-12 rounded-full" />
+        <div className="space-y-2">
+          <Skeleton className="h-4 w-[250px]" />
+          <Skeleton className="h-4 w-[200px]" />
+        </div>
+      </div>
+      <div className="flex items-center space-x-4">
+          <Skeleton className="h-12 w-12 rounded-full" />
+        <div className="space-y-2">
+          <Skeleton className="h-4 w-[250px]" />
+          <Skeleton className="h-4 w-[200px]" />
+        </div>
+      </div>
+        </>
+  
+      } 
         </div>
       </section>
       <Scroller/>
