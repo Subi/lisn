@@ -9,12 +9,9 @@ import { Button } from "@/components/ui/button";
 import Scroller from "@/components/scroller";
 
 
-
-
 export default async function Home() {
   const response:TokenResponse = await getAccessToken()
   const playingTrack:StreamingTrackResponse = await getCurrentPlayingTrack(response.access_token)
-  console.log(playingTrack)
   return (
     <main className="w-full flex-col items-center  justify-center">
       <Header/>
