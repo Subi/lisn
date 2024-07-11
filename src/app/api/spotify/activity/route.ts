@@ -1,8 +1,6 @@
 import { getAccessToken, getCurrentPlayingTrack } from "@/server/spotify";
 import { CURRENTLY_PLAYING, TOKEN_ENDPOINT } from "@/server/spotify/constant";
 import { StreamingTrackResponse, TokenResponse } from "@/server/spotify/interface";
-import { DotFilledIcon } from "@radix-ui/react-icons";
-import { headers } from "next/headers";
 import { NextRequest , NextResponse } from "next/server";
 
 

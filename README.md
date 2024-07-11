@@ -12,7 +12,8 @@
 - [x] Add timelapses
 - [x] Add progress bar 
 - [x] Move player to bottom of screen
-- []  Fix inital time to update accordingly
+- [x] Fix inital time to update accordingly
+- []  Get off localhost 
 - []  User Signup
 - []  Create user database
 - []  Connect supabase
@@ -26,5 +27,5 @@
 
 - [x] Update landing page
 - [x] - Add heading text
-- [ ] - Create horizontal slider w/albums (grayed out but on hover light up)
+- [x] - Create horizontal slider w/albums (grayed out but on hover light up)
 - [x] - Improve player shadow ? 

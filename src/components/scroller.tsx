@@ -45,7 +45,7 @@ export default function Scroller() {
         <ul id="scroller__inner" className="flex gap-4 flex-nowrap w-max animate-scroll">
             {albumImages.map((image , index) => {
               return (
-                <li key={index}>
+                <li key={index} className=" opacity-50 hover:opacity-100 hover:transition-opacity duration-700">
                     <Image alt="album" src={image} height={150} width={150}/>
                 </li>
               )

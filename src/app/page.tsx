@@ -14,18 +14,18 @@ import Scroller from "@/components/scroller";
 export default async function Home() {
   const response:TokenResponse = await getAccessToken()
   const playingTrack:StreamingTrackResponse = await getCurrentPlayingTrack(response.access_token)
-
+  console.log(playingTrack)
   return (
     <main className="w-full flex-col items-center  justify-center">
       <Header/>
-      <section className="w-9/12 mx-auto flex justify-between  py-28">
-        <div className="flex-col">
-          <h1 className="text-6xl  leading-tight tracking-wide font-bold  pb-24">See what songs people are currently listening too.</h1>
+      <section className="w-9/12  mx-auto flex justify-between  py-28">
+        <div className="flex-col ">
+          <h1 className="text-6xl tracking-wide font-bold pb-24 xl:text-5xl xl:leading-snug">See what songs people are currently listening too.</h1>
           <Link href="https://form.typeform.com/to/UzO3AdNc">
             <Button variant="default" className="text-lg tracking-wide bg-black text-white font-semibold py-5 px-10 rounded-md hover:bg-black">Get Started </Button>          
           </Link>
         </div>
-        <div className="w-4/12 justify-start flex-col mr-10">
+        <div className="w-4/12 justify-start flex-col mr-10 xl:w-6/12">
         <div className="w-full ">
             <p className=" text-md tracking-wide font-semibold">
               Recent Activity
@@ -35,7 +35,9 @@ export default async function Home() {
             </span>
               </p>
         </div>
-        <UserStreamingActivity accessToken={response.access_token} track={playingTrack.item} />
+        {!playingTrack != undefined ? 
+        <UserStreamingActivity accessToken={response.access_token} track={playingTrack.item} /> 
+        : "d"} 
         </div>
       </section>
       <Scroller/>
