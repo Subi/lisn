@@ -1,6 +1,8 @@
 "use client"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import { concertImage } from "@/images"
 
 export default function Page() {
   return (
@@ -38,14 +40,22 @@ export default function Page() {
                       </div>
                     </div>
                     <div>
-                      <Button className="w-full">Sign up</Button>
+                      <Button className="w-full">Continue</Button>
                     </div>
                   </form>
               </div>
           </div>
       </div>
-      <div className="w-6/12">
-          
+      <div className="w-6/12 relative ">
+        <Image 
+        alt="concert crowd"
+        src={concertImage}
+        fill
+        priority
+        quality={100}
+        unoptimized={false}
+        style={{objectFit:'cover'}}
+        />
       </div>
   </div>
   )
