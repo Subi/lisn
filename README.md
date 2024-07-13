@@ -29,3 +29,4 @@
 - [x] - Add heading text
 - [x] - Create horizontal slider w/albums (grayed out but on hover light up)
 - [x] - Improve player shadow ? 
+- []  - Mobile support 

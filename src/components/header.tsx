@@ -15,7 +15,7 @@ export default function Header() {
                     <Link href="/sign-in">Sign in</Link>
                 </div>
             <Button  className="text-sm font-semibold bg-black">
-                <Link href="https://form.typeform.com/to/UzO3AdNc">Sign up</Link>
+                <Link href="/sign-up">Sign up</Link>
             </Button>
             </div>
         </div>

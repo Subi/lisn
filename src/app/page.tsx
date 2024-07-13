@@ -13,7 +13,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 export default async function Home() {
   const response:TokenResponse = await getAccessToken()
   const playingTrack:StreamingTrackResponse = await getCurrentPlayingTrack(response.access_token)
-  console.log(playingTrack)
   return (
     <main className="w-full flex-col items-center  justify-center">
       <Header/>
@@ -52,8 +51,7 @@ export default async function Home() {
           <Skeleton className="h-4 w-[200px]" />
         </div>
       </div>
-        </>
-  
+        </> 
       } 
         </div>
       </section>

@@ -20,8 +20,6 @@ export default function Player({track , progress}:PlayerProps ){
         }
     } , [])
 
-    
-
     return (
         <div className="w-5/12 py-[7px] mx-auto flex justify-between  absolute  bottom-7 left-0 right-0   bg-black opacity-95 text-white rounded-full shadow-2xl">
             <div className=" flex pl-3  items-center">
