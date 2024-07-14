@@ -13,15 +13,13 @@
 - [x] Add progress bar 
 - [x] Move player to bottom of screen
 - [x] Fix inital time to update accordingly
-- [x]  Get off localhost 
-- []  User Signup
+- [x] Get off localhost 
+- []  Sign up / login flow
 - []  Create user database
 - []  Connect supabase
 - [x]  Add ability to connect to spotify
 - []  ! IF TIME ADDING FREINDS 
 - []  ! IF TIME PLAY COUNT
-
-
 
 ## Styling
 

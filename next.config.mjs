@@ -16,6 +16,11 @@ const nextConfig = {
                 protocol: 'http',
                 hostname: "i.scdn.co",
                 port: '',
+            },
+            {
+                protocol: 'https',
+                hostname: "images.unsplash.com",
+                port: '',
             }
         ]
     }
