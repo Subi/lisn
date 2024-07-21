@@ -1,11 +1,30 @@
-"use client"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import { concertImage } from "@/images"
+import Image, { StaticImageData } from "next/image"
+import { appleLogo, concertImage, spotifyLogo } from "@/images"
 import Form from "./form"
 
+export type Option = {
+  name: string;
+  image: StaticImageData | string
+  isSelected: boolean
+}
+ 
+const streamingPlatforms:Option[] = [
+  {
+      name: "Spotify",
+      image: spotifyLogo,
+      isSelected: false,
+  },
+  {
+      name: "Apple Music",
+      image: appleLogo,
+      isSelected: false,
+  },
+]
+
 export default function Page() {
+  
   return (
   <div className="w-full flex h-screen">
       <div className="w-6/12 flex-col rounded-lg shadow-2xl">
@@ -14,20 +33,7 @@ export default function Page() {
             Lisn .
             </Link>
           </div>
-          <div className="w-full pt-20 justify-center flex">
-              <div className="w-[400px] flex flex-col p-10">
-                  <div className="flex-col">
-                      <div className="text-2xl font-bold">
-                        Get Started Now.
-                      </div>
-                      <div className="text-xs text-gray-400 tracking-wide py-3">
-                        Enter your credentials to access your account
-                      </div>
-                      <hr/>
-                  </div>
-                  <Form/>
-              </div>
-          </div>
+          <Form streamingOptions={streamingPlatforms}/>
       </div>
       <div className="w-6/12 relative ">
         <Image 

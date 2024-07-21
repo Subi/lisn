@@ -1,0 +1,28 @@
+"use client"
+import Image, { StaticImageData } from "next/image";
+import { useEffect, useLayoutEffect, useState } from "react";
+import { Option } from "@/app/(auth)/sign-up/page";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
+
+interface PlatformOptionProps {
+    index:number
+    option: Option
+    handleOptions: (value:number) => void
+}
+
+export default function PlatformOption({index, option , handleOptions}:PlatformOptionProps) {
+    return (
+    <div onClick={() => {handleOptions(index)}} className={twMerge(option.isSelected ? `border w-5/12 flex  bg-slate-100 rounded-lg shadow-md flex-col items-center p-5 -translate-y-4 duration-500 border-blue-200 transition-transform` : "border w-5/12 flex rounded-lg shadow-md flex-col items-center p-5")}>
+        <div className="w-full flex pb-2 items-center justify-center">
+        <Image 
+            src={option.image}
+            width={30}
+            height={30}
+            alt={option.name}
+            />
+        </div>
+        {option.name}
+    </div>
+    )
+}

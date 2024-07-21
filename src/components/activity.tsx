@@ -11,7 +11,6 @@ interface UserStreamingActivityProps {
 }
 
 
-
 export default function UserStreamingActivity({accessToken , track}:UserStreamingActivityProps) {
     const [activity , setActivity] = useState<Item>(track)
     const updateStreamingActivity = async () => {

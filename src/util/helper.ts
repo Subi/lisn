@@ -4,3 +4,4 @@ export const convertTime = (time:number):string => {
     const seconds = (time % 59000 / 1000).toFixed(0)
     return `${minutes}:${seconds}`
 }
+
