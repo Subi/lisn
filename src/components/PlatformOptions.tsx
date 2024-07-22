@@ -13,16 +13,16 @@ interface PlatformOptionProps {
 
 export default function PlatformOption({index, option , handleOptions}:PlatformOptionProps) {
     return (
-    <div onClick={() => {handleOptions(index)}} className={twMerge(option.isSelected ? `border w-5/12 flex  bg-slate-100 rounded-lg shadow-md flex-col items-center p-5 -translate-y-4 duration-500 border-blue-200 transition-transform` : "border w-5/12 flex rounded-lg shadow-md flex-col items-center p-5")}>
-        <div className="w-full flex pb-2 items-center justify-center">
+    <div onClick={() => {handleOptions(index)}} className={twMerge(option.isSelected ? `border w-5/12 flex  bg-slate-100 rounded-lg shadow-md flex-col items-center p-5 -translate-y-4  duration-500 border-blue-200 transition-transform` : "border w-5/12 flex rounded-lg shadow-md flex-col items-center p-5")}>
+        <div className="text-sm w-full flex pb-2 items-center justify-center">
         <Image 
             src={option.image}
-            width={30}
-            height={30}
+            width={27}
+            height={27}
             alt={option.name}
             />
         </div>
-        {option.name}
+        <span  className="text-xs tracking-wide">{option.name}</span>
     </div>
     )
 }
