@@ -15,8 +15,6 @@ type FormProps = {
 }
 
 
-
-
 export default function Form({streamingOptions}:FormProps) {
     const [credentials , setCredentials] = useState<boolean>(false)
     const [options , setOptions] = useState<Option[]>(streamingOptions)
@@ -89,6 +87,5 @@ export default function Form({streamingOptions}:FormProps) {
     </form>
       </div>
   </div>
-
     )
 }
