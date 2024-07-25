@@ -9,9 +9,6 @@ export type Option = {
   image: StaticImageData | string
   isSelected: boolean
 }
-
-
-
  
 const streamingPlatforms:Option[] = [
   {

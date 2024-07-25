@@ -24,13 +24,11 @@ export async function signupAction(prevState:FormState , data: FormData): Promis
     }
     const supabase =  createClient()
     const {error} = await supabase.auth.signUp(parsed.data)
-
-
     if(error) {
-        console.log(error)
-        redirect('/error')
+        return {
+            message: error.code as string
+        }
     }
-
     revalidatePath('/signup')
     return {
         message: "Success"
