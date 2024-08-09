@@ -5,6 +5,7 @@ import { schema } from "./schema";
 import { SignUpWithPasswordCredentials } from "@supabase/supabase-js";
 import  { redirect } from 'next/navigation';
 import { revalidatePath } from "next/cache";
+import { Option } from "./page";
 
 export type FormState = {
     message: string;
@@ -12,7 +13,16 @@ export type FormState = {
     issues?: string[]
 }
 
+
+export async function linkAccountAction(data:Option | undefined , email: string) {
+    if(data) {
+        const supabase = createClient()
+    
+    }
+}
+
 export async function signupAction(prevState:FormState , data: FormData): Promise<FormState> {
+    console.log(data)
     const formData =  Object.fromEntries(data)
     const parsed =  schema.safeParse(formData) 
     if(!parsed.success) {
@@ -25,11 +35,13 @@ export async function signupAction(prevState:FormState , data: FormData): Promis
     const supabase =  createClient()
     const {error} = await supabase.auth.signUp(parsed.data)
     if(error) {
+        console.log(error)
         return {
             message: error.code as string
         }
     }
     revalidatePath('/signup')
+    console.log("success")
     return {
         message: "Success"
     }

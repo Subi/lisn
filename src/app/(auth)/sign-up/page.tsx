@@ -3,11 +3,13 @@ import { Button } from "@/components/ui/button"
 import Image, { StaticImageData } from "next/image"
 import { appleLogo, concertImage, spotifyLogo } from "@/images"
 import Form from "./form"
+import { AUTHORIZE_ENDPOINT } from "@/server/spotify/constant"
 
 export type Option = {
   name: string;
   image: StaticImageData | string
   isSelected: boolean
+  authorizedEndpoint: string
 }
  
 const streamingPlatforms:Option[] = [
@@ -15,11 +17,13 @@ const streamingPlatforms:Option[] = [
       name: "Spotify",
       image: spotifyLogo,
       isSelected: false,
+      authorizedEndpoint: AUTHORIZE_ENDPOINT
   },
   {
       name: "Apple Music",
       image: appleLogo,
       isSelected: false,
+      authorizedEndpoint: ""
   },
 ]
 

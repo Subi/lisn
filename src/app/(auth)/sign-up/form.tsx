@@ -6,12 +6,11 @@ import PlatformOption from "@/components/PlatformOptions";import { appleLogo, sp
 import { Option } from "./page";
 import {z} from 'zod'
 import { zodResolver } from "@hookform/resolvers/zod";
-import {  signupAction } from "./actions";
+import {  linkAccountAction, signupAction } from "./actions";
 import { useFormState } from "react-dom";
 import {schema} from './schema'
 import { toast } from "sonner"
-import { redirect } from "next/navigation";
-import { totalmem } from "os";
+
 
 type FormProps = {
   streamingOptions: Option[]
@@ -19,12 +18,13 @@ type FormProps = {
 
 
 export default function Form({streamingOptions}:FormProps) {
-
     const [credentials , setCredentials] = useState<boolean>(false)
+    const [email , setEmail] = useState<string>("")
     const [options , setOptions] = useState<Option[]>(streamingOptions)
     const [state , formAction]  = useFormState(signupAction , {
       message: "",
     })
+    
     
     useEffect(() => {
       if(state.message === "Success") {
@@ -51,8 +51,9 @@ export default function Form({streamingOptions}:FormProps) {
       setOptions(newOptions)
     }
 
-    const linkAccount = () => {
-
+    const linkAccount = async () => {
+      const selectedOption:Option | undefined = options.find(option => option.isSelected);
+      await linkAccountAction(selectedOption , email)
     }
 
 
@@ -79,7 +80,7 @@ export default function Form({streamingOptions}:FormProps) {
             <div>
             <label className="text-xs tracking-wide font-medium">Email Address</label>
             </div>
-            <input {...register("email")}  className="tracking-wide  pl-2 w-full text-xs border rounded-lg p-[7px]" type="text" placeholder="example@domain.com"/>
+            <input {...register("email")} onChange={(e) => {setEmail(e.target.value)}}  className="tracking-wide  pl-2 w-full text-xs border rounded-lg p-[7px]" type="text" placeholder="example@domain.com"/>
               {errors.email && <div className="text-xs p-1 tracking-wide text-red-500">{errors.email.message}</div>}
           </div>
           <div className="flex-col pb-3">
@@ -103,7 +104,8 @@ export default function Form({streamingOptions}:FormProps) {
         })}
         </div>
         <div className="pt-3">
-            <Button onClick={() => linkAccount()} className="w-full">Connect</Button>
+
+            <Button onClick={async () => await linkAccount()} className="w-full">Connect</Button>
         </div>
         </div>
        }
